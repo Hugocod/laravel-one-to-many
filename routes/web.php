@@ -26,10 +26,14 @@ Route::middleware('auth')
 ->name('admin.')
 ->prefix('admin')
 ->group(function(){
-    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/admin', 'HomeController@index')->name('home');
 });
 
 
-Route::get("{any?}", function(){
+Route::get('/cipolla', function () {
     return view('guest.home');
+});
+
+Route::get("{any?}", function(){
+    return view('home');
 })->where('any', '.*');

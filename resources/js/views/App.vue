@@ -1,17 +1,25 @@
 <template>
     <div>
-        <example-component />
-        ciao
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
+        <h1>ciao</h1>
     </div>
 </template>
 
 <script>
-import ExampleComponent from "../components/ExampleComponent.vue";
-
 export default {
     name: "App",
-    components: { ExampleComponent },
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+h1 {
+    font-size: 4rem;
+    color: black;
+}
+</style>
