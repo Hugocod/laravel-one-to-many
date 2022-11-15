@@ -30,10 +30,6 @@ Route::middleware('auth')
 });
 
 
-Route::get('/cipolla', function () {
-    return view('guest.home');
-});
-
 Route::get("{any?}", function(){
-    return view('home');
+    return view('guest.home');
 })->where('any', '.*');
