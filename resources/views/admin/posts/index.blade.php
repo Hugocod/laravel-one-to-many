@@ -1,1 +1,5 @@
-sono la index di posts
+@extends('layouts.dashboard')
+
+@section('content')
+    sono la guest
+@endsection
