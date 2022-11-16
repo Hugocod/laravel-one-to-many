@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+<a class="font-weight-bold text-success"  href="{{route('admin.posts.create')}}">Crea nuovo Post</a>
+
 <div class="row">
 
     @foreach ($posts as $post)
