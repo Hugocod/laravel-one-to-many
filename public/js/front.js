@@ -50385,8 +50385,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/MAMP/htdocs/php_project/laravel_au_test/laravel-auth-a/resources/js/front.js */"./resources/js/front.js");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/php_project/laravel_au_test/laravel-auth-a/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Applications/MAMP/htdocs/php_project/laravel_one_to_many/laravel_one_to_many/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/php_project/laravel_one_to_many/laravel_one_to_many/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
