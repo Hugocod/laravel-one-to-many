@@ -44,14 +44,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'title' => 'required|min:5|max:255',
-            'content' => 'required'
-        ], [
-            'required' => ':attribute is mandatory',
-            'min' => ':attribute should be at least :min chars',
-            'max' => ':attribute should have max length of :max chars'
-        ]);
+        $this->validatePost($request);
         $form_data = $request->all();
         $post = new Post();
         $post->fill($form_data);
@@ -85,7 +78,8 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         //
-        return view('admin.posts.edit', compact('post'));
+        $categories = Category::all();
+        return view('admin.posts.edit', compact(['post', 'categories']));
     }
 
     /**
@@ -98,16 +92,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
-         $request->validate([
-            'title' => 'required|min:5|max:255',
-            'content' => 'required',
-            'category_id' => 'nullable|exists: categories,id'
-         ], [
-            'required' => ':attribute is mandatory',
-            'min' => ':attribute should be at least :min chars',
-            'max' => ':attribute should have max length of :max chars',
-            'category_id.exists' => 'Category does not exists anymore'
-         ]);
+        $this->validatePost($request);
         $form_data = $request->all();
         if($post->title != $form_data['title']){
             $slug = $this->getSlug($form_data['title']);
@@ -146,6 +131,17 @@ class PostController extends Controller
         return $slug;
     }
 
-
+    private function validatePost(Request $request){
+        $request->validate([
+            'title' => 'required|min:5|max:255',
+            'content' => 'required',
+            'category_id' => 'nullable|exists:categories,id'
+        ], [
+            'required' => ':attribute is mandatory',
+            'min' => ':attribute should be at least :min chars',
+            'max' => ':attribute should have max length of :max chars',
+            'category_id.exists' => 'Category doesn\'t exists anymore :('
+        ]);
+    }
 
 }
