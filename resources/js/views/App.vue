@@ -1,13 +1,6 @@
 <template>
     <div>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
-        <h1>ciao</h1>
+        <h1>Sono la Guest Home</h1>
     </div>
 </template>
 

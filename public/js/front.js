@@ -1933,7 +1933,7 @@ var render = function render() {
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")]), _vm._v(" "), _c("h1", [_vm._v("ciao")])]);
+  return _c("div", [_c("h1", [_vm._v("Sono la Guest Home")])]);
 }];
 render._withStripped = true;
 
